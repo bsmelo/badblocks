@@ -1,4 +1,11 @@
 #!/bin/bash
+
+# Copyright (C) 2017 bsmelo.io
+#
+# This file is subject to the terms and conditions of the GNU General
+# Public License v3.0. See the file LICENSE in the top level directory
+# for more details.
+
 # Dependencies: smartctl, grep, dd, ifind, ffind, debugfs, shred, awk
 FS_TYPE="ext4"                  # "NTFS" or "ext4"
 STARTING_BLOCK=16001024         # From `sudo fdisk -lu /dev/sda`

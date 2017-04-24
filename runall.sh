@@ -1,4 +1,11 @@
 #!/bin/bash
+
+# Copyright (C) 2017 bsmelo.io
+#
+# This file is subject to the terms and conditions of the GNU General
+# Public License v3.0. See the file LICENSE in the top level directory
+# for more details.
+
 # Dependencies: smartctl, grep, dd, ifind, ffind, debugfs, shred, awk
 TEST="select,960000000-max"     # Self-test to be run, see `man smartctl`
 FS_DEVICE="/dev/sda2"           # Target File System
