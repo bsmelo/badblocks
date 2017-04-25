@@ -14,7 +14,7 @@ POLLING_INTERVAL=5              # Interval, in seconds, between checks for a fin
 (set -x; sudo smartctl -t "${TEST}" "${FS_DEVICE}")
 
 while true; do
-    output=$(sudo smartctl -l "${FS_DEVICE}" | grep "# 1")
+    output=$(sudo smartctl -l selftest "${FS_DEVICE}" | grep "# 1")
 
     if [[ $output == *"Completed: read failure"* ]]; then
         echo
