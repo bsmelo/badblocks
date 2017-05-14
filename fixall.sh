@@ -70,7 +70,7 @@ elif [ "${FS_TYPE}" == "ext4" ]; then
         echo "Auto"
         run_dd_ext3 $b
     else
-        fname=$(set -x; sudo debugfs -R "ncheck ${inode}" "${FS_DEVICE}" | awk 'NR == 2 {print $2}')
+        fname=$(set -x; sudo debugfs -R "ncheck ${inode}" "${FS_DEVICE}" | awk 'NR == 2 { s = ""; for (i = 2; i <= NF; i++) s = s $i " "; print s }')
         echo "File is ${fname}"
 
         read -r -p "Should we delete this block? " response
